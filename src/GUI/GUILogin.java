@@ -56,7 +56,7 @@ public class GUILogin extends JFrame {
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 
-				ConnectToDataBase connectDB = new ConnectToDataBase();
+				ConnectionDB connectDB = new ConnectionDB();
 				connectDB.connection();
 				
 

@@ -11,25 +11,29 @@ public abstract class Shape {
 	int shape_iduser;
 	int user_id;
 	Graphics graphics;
-	int width;
-	int height;
+	int width = Math.abs(this.xStart - this.xEnd);
+	int height = Math.abs(this.yEnd - this.yStart);
+
 	public abstract void drawShape();
 
 	public Shape(int xStart, int yStart, int xEnd, int yEnd, String color, int user_id) {
 		super();
 		this.xStart = xStart;
 		this.yStart = yStart;
-		this.xEnd = xEnd;
-		this.yEnd = yEnd;
+		this.xEnd=xEnd;
+		this.yEnd=yEnd;
 		Color = color;
 		this.user_id = user_id;
 	}
-	
-	public Graphics getGraphics(){
-		return graphics;
+
+	public int getWidth() {
+		return width;
 	}
-	
-	
+
+	public int getHeight() {
+		return height;
+	}
+
 	public int getxStart() {
 		return xStart;
 	}
@@ -85,11 +89,21 @@ public abstract class Shape {
 	public void setUser_id(int user_id) {
 		this.user_id = user_id;
 	}
-	
-	
-		
-	
-	
-	
+
+	public Graphics getGraphics() {
+		return graphics;
+	}
+
+	public void setGraphics(Graphics graphics) {
+		this.graphics = graphics;
+	}
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
 
 }

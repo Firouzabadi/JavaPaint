@@ -1,35 +1,44 @@
 package GUI;
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JSplitPane;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.JSeparator;
-import javax.swing.JRadioButton;
-import javax.swing.ButtonGroup;
+import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class GUIpaint extends JFrame {
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.border.EmptyBorder;
+
+public class GUIPaint extends JFrame {
 
 	private JPanel contentPane;
-	private final ButtonGroup buttonGroup = new ButtonGroup();
 
-	int xStart, yStart,xEnd,yEnd,shape_iduser;
-	String type,shapeColor;
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					GUIPaint frame = new GUIPaint();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
 	/**
 	 * Create the frame.
 	 */
-	public GUIpaint() {
-		
-		 
-		
+	public GUIPaint() {
+
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 688, 507);
 		contentPane = new JPanel();
@@ -92,10 +101,12 @@ public class GUIpaint extends JFrame {
 				xEnd = e.getX();
 				yEnd = e.getY();
 			}
-			Shape newShape = new Shape(xStart, yStart, xEnd, yEnd, type, shapeColor, shape_iduser);
+			Shape newShape = new Shape(
 		});
 		panel.setBackground(Color.WHITE);
 		panel.setBounds(6, 1, 500, 500);
 		contentPane.add(panel);
+
 	}
+
 }

@@ -1,8 +1,18 @@
+package User;
 
 public class User {
 	int idUser;
 	String username;
 	char[] password;
+	boolean isLogin;
+
+	public boolean isLogin() {
+		return isLogin;
+	}
+
+	public void setLogin(boolean isLogin) {
+		this.isLogin = isLogin;
+	}
 
 	public User(String username, char[] inputPassword) {
 		super();

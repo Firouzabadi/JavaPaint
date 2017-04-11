@@ -1,15 +1,15 @@
-package Shape;
+package EntityManageer;
 import java.sql.SQLException;
 
-public class ShapeEM {
+public class ShapeDB {
 
 	public void addShape(Shape newShape) {
 
 		ConnectToDataBase connectDB = new ConnectToDataBase();
 		connectDB.connection();
 		
-		String sqlAddShape = "INSERT INTO `Paint`.`shape`"+
-		"(`type`, `shapeColor`, `xStart`, `xEnd`, `yStart`, `yEnd`, `shape_iduser`)"
+		String sqlAddShape = "INSERT INTO `Paint`.`shape`+
+		"(`shapeColor`, `xStart`, `xEnd`, `yStart`, `yEnd`, `shape_iduser`)"
 				+" VALUES ('"+newShape.type+"', '"+newShape.shapeColor+"', '"+newShape.xStart+"', '"+newShape.xEnd+"', '"+newShape.yStart+"', '"
 		+newShape.yEnd+"', '"+newShape.shape_iduser+"');";
 		try {

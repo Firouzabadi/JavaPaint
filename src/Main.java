@@ -1,3 +1,5 @@
+import GUI.*;
+
 import java.awt.EventQueue;
 
 public class Main {
@@ -9,25 +11,17 @@ public class Main {
 
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
-				try {
-					GUILogin frame = new GUILogin();
-					frame.setVisible(true);
-					if(GUILogin.userIsValid == true){
-						System.out.println("man");
-					GUIpaint frame1 = new GUIpaint();
-					frame1.setVisible(true);
-					}
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+
+				//GUILogin frame = new GUILogin();
+				//frame.setVisible(true);
+				//System.out.println("man");
+				GUIpaint paintGUI = new GUIpaint();
+				paintGUI.setVisible(true);
+
 			}
-	
+
 		});
-	
-	
-	
-	
+
 	}
-	
-	
+
 }
