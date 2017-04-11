@@ -14,7 +14,10 @@ public abstract class Shape {
 	int width = Math.abs(this.xStart - this.xEnd);
 	int height = Math.abs(this.yEnd - this.yStart);
 
-	public abstract void drawShape();
+
+	public Shape() {
+		super();
+	}
 
 	public Shape(int xStart, int yStart, int xEnd, int yEnd, String color, int user_id) {
 		super();
@@ -104,6 +107,11 @@ public abstract class Shape {
 
 	public void setHeight(int height) {
 		this.height = height;
+	}
+
+	public void drawShape(Graphics g) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

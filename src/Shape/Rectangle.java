@@ -1,5 +1,7 @@
 package Shape;
 
+import java.awt.Graphics;
+
 public class Rectangle extends Shape {
 
 	public Rectangle(int xStart, int yStart, int width, int height, String color, int user_id) {
@@ -8,9 +10,10 @@ public class Rectangle extends Shape {
 	}
 
 	@Override
-	public void drawShape() {
+	public void drawShape(Graphics g) {
 		// TODO Auto-generated method stub
 		// Graphics: drawRect(x, y, width, height)
-		super.getGraphics().drawRect(super.getxStart(),super.getyStart(), super.getWidth(), super.getHeight());
+
+		g.drawRect(super.getxStart(),super.getyStart(), super.getWidth(), super.getHeight());
 	}
 }
